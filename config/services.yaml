@@ -19,6 +19,15 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+    security.acl.permission.map:
+      class: Sonata\AdminBundle\Security\Acl\Permission\AdminPermissionMap
+    sonata.user.manager.user:
+      alias: Sonata\UserBundle\Model\UserManagerInterface
+
+
+# optionally use a custom MaskBuilder
+parameters:
+    sonata.admin.security.mask.builder.class: Sonata\AdminBundle\Security\Acl\Permission\MaskBuilder
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
