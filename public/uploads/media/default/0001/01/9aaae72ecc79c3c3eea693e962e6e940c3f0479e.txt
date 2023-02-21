@@ -1,0 +1,32 @@
+Sonata : ecosystem of many bundles
+
+=>Admin Bundle: includes main features of a CMS generator
+
+-SonataAdminBundle: core libraries and services:
+	*Download the Bundle (composer require sonata-project/admin-bundle)
+	*Download a Storage Bundle (SonataDoctrineORMAdminBundle)
+	*Enable the Admin Bundle by adding the documentation line into bundles.php
+	*Optional: you can use the SonataBlockBundle to configure installed Bundles (put everything into blocks / you have to tell the Block Bundle about the existence of the admin block on sonata_admin.yaml - check documentation for more-)
+	*Enable translator service (framework.yaml)
+	*Define routes (routing.php)
+
+	bin/console cache:clear
+	bin/console assets:install
+
+=>Persistence Bundles:
+SonataDoctrineORMAdminBundle: integrates Doctrine ORM project with the admin bundle
+
+=>Foundation Bundles: Base features that most CMS could need.
+
+-SonataBlockBundle
+-SonataFormatterBundle
+-SonataSeoBundle
+-SonataTranslationBundle
+-SonataUserBundle
+
+=>Feature Bundles: Useful features packaged in a bundle to be installed if needed
+
+-SonataClassificationBundle
+-SonataIntlBundle
+-SonataMediaBundle
+-SonataPageBundle
