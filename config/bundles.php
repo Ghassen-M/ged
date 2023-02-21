@@ -14,4 +14,5 @@ return [
     Sonata\AdminBundle\SonataAdminBundle::class => ['all' => true],
     Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
     Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle::class => ['all' => true],
+    Symfony\Bundle\AclBundle\AclBundle::class => ['all' => true],
 ];
