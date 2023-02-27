@@ -16,5 +16,5 @@ class AdminVoter extends Voter
     protected function voteOnAttribute($attribute, $subject, TokenInterface $token) : bool
     {
         return true;
-    }
+    } 
 }

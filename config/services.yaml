@@ -21,8 +21,8 @@ services:
             - '../src/Kernel.php'
     App\Security\AdminVoter:
         tags: [security.voter]
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
     App\Manager\AclUserManager:
         arguments:
             $userManager: '@sonata.admin.manager.orm'
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
